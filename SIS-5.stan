@@ -45,7 +45,6 @@ transformed parameters {
   real C_star; // steady-state Ct prevalence
   real M_star; // steady-state Mgen prevalence
   
-//  real<lower=0, upper=1> p_persist_C; // probability of persistence - Ct 
   real p_persist_M; // probability of persistence - Mgen
 
   matrix[5,5] Q;
@@ -55,7 +54,6 @@ transformed parameters {
   C_star = alpha_SC / (alpha_CS + alpha_SC);
   M_star = alpha_SM / (alpha_MS + alpha_SM);
   
-//  p_persist_C = C_star + (1 - C_star)*exp(-(alpha_CS + alpha_SC)*persist_t);
   p_persist_M = M_star + (1 - M_star)*exp(-(alpha_MS + alpha_SM)*persist_t);
 
   Q = [[-(alpha_SC + alpha_SM + alpha_SP), alpha_SC, alpha_SM, 0, alpha_SP],
