@@ -188,7 +188,7 @@ dt_price_16 <- data.frame(
   HES = c(1233, 3101, 9756, 10526),
   GPRD = c(5083, 8842, 14932, 9609),
   GUM = c(3212, 4399, 3919, 1388),
-  pop = c(1199600, 1519100, 3502100, 3795600)*c(0.679, 0.944, 0.991, 0.991) # adjust for Natsal-2 proportion sexually active
+  pop = c(1199600, 1519100, 3502100, 3795600)*c((0.679, 0.944, 0.991, 0.991) # adjust for Natsal-2 proportion sexually active
 )
 dt_price_16$total_max <- dt_price_16$HES + dt_price_16$GPRD + dt_price_16$GUM
 dt_price_16$rate_max <- 100000*dt_price_16$total_max/dt_price_16$pop
@@ -272,3 +272,4 @@ axis(side=3, at=1:4, labels = paste(
   tick = FALSE,
   line=-0.3, cex.axis=0.7
 )
+

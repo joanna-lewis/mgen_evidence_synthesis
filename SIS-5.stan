@@ -125,15 +125,15 @@ generated quantities {
         natsal_prev_mg[i] * natsal_prev_ct[i] * (alpha_SP + alpha_MP + alpha_CP) // both infections
         ); 
         
-      natsal_pid_obs[i] = natsal_pid[i] * beta_rng(12 + 9 + 1, 15 + 23 - 12 - 9 + 1);
+      natsal_pid_obs[i] = natsal_pid[i] * beta_rng(12, 19); //beta_rng(12 + 9 + 1, 15 + 23 - 12 - 9 + 1);
         
       // pid attributable to Mg
       natsal_pid_mg[i] = 100000*natsal_prev_mg[i] * (alpha_MP);
-      natsal_pid_mg_obs[i] = natsal_pid_mg[i] * beta_rng(12 + 9 + 1, 15 + 23 - 12 - 9 + 1);
+      natsal_pid_mg_obs[i] = natsal_pid_mg[i] * beta_rng(12, 19); //beta_rng(12 + 9 + 1, 15 + 23 - 12 - 9 + 1);
       
       // pid attributable to Ct
       natsal_pid_ct[i] = 100000*natsal_prev_ct[i] * (alpha_CP);
-      natsal_pid_ct_obs[i] = natsal_pid_ct[i] * beta_rng(12 + 9 + 1, 15 + 23 - 12 - 9 + 1);
+      natsal_pid_ct_obs[i] = natsal_pid_ct[i] * beta_rng(12, 19); //beta_rng(12 + 9 + 1, 15 + 23 - 12 - 9 + 1);
       }
 
 }
